@@ -1,23 +1,31 @@
+# from setuptools import find_packages, setup 
 from distutils.core import setup
 
-version = '0.1'
+version      = '0.2'
+name         = 'sw_solo'
+url          = f'https://github.com/jurgeon018/{name}'
+download_url = f'{url}/archive/{version}.tar.gz'
 
 with open('requirements.txt') as f:
   requires = f.read().splitlines()
 
 setup(
-  name = 'django-sw-solo', 
-  packages = ['.'], 
-  version = version,
-  license='MIT',   
-  description = 'Starway singleton django package',   
-  author = 'jurgeon018',                   
-  author_email = 'jurgeon018@gmail.com',      
-  url = 'https://github.com/jurgeon018/sw_solo',   
-  download_url = 'https://github.com/jurgeon018/sw_solo/archive/v_01.tar.gz',    
-  keywords = ['singleton', 'solo', 'django'],   
-  install_requires=requires,
-  classifiers=[
+  name             = name,
+  packages         = ['.'], 
+  # packages         = find_packages(),
+  version          = version,
+  license          = 'MIT',   
+  description      = 'Starway singleton django package',   
+  author           = 'Andrew Mendela',                   
+  author_email     = 'jurgeon018@gmail.com',      
+  url              = url,
+  download_url     = download_url,    
+  install_requires = requires,
+  # include_package_data=True,
+  keywords         = [
+    'singleton', 'solo', 'django',
+  ],   
+  classifiers      = [
     'Development Status :: 3 - Alpha',      # "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
     'Intended Audience :: Developers',      
     'Topic :: Software Development :: Build Tools',

@@ -1,5 +1,12 @@
-
-
-python setup.py sdist
 pip install twine
+
+git add .
+git commit -m 's'
+git pull origin master 
+git push origin master 
+https://github.com/jurgeon018/sw_solo/releases
+Draft new release 
+Edit setup.py(version, download_url) 
+python setup.py sdist
 twine upload dist/*
+pip install django-sw-solo
