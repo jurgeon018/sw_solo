@@ -2,7 +2,7 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.http import HttpResponseRedirect
 
-from sw_utils.sw_solo.models import DEFAULT_SINGLETON_INSTANCE_ID
+from sw_solo.models import DEFAULT_SINGLETON_INSTANCE_ID
 
 try:
     from django.utils.encoding import force_unicode
